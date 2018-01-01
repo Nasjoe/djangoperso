@@ -30,9 +30,11 @@ RUN pip install selenium
 
 RUN apt-get -y install chrpath libssl-dev libxft-dev libfreetype6 libfreetype6-dev libfontconfig1 libfontconfig1-dev
 
-
 RUN cd /usr/local/share/
+RUN apt install wget -y
 RUN wget https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-2.1.1-linux-x86_64.tar.bz2
+RUN tar xvf phantomjs-2.1.1-linux-x86_64.tar.bz2
+
 # ADD phantomjs-2.1.1-linux-x86_64.tar.bz2 /usr/local/share/
 
 RUN ln -sf /usr/local/share/phantomjs-2.1.1-linux-x86_64/bin/phantomjs /usr/local/share/
