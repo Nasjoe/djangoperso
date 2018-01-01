@@ -12,7 +12,7 @@ RUN apt install unrar -y
 RUN pip install pip --upgrade
 RUN apt install -y python-dev
 RUN apt install -y build-essential
-RUN pip install django
+RUN pip install django==1.11
 RUN pip install ipython
 RUN pip install epub_meta
 RUN pip install python-amazon-simple-product-api
@@ -30,7 +30,11 @@ RUN pip install selenium
 
 RUN apt-get -y install chrpath libssl-dev libxft-dev libfreetype6 libfreetype6-dev libfontconfig1 libfontconfig1-dev
 
-ADD phantomjs-2.1.1-linux-x86_64.tar.bz2 /usr/local/share/
+
+RUN cd /usr/local/share/
+RUN wget https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-2.1.1-linux-x86_64.tar.bz2
+# ADD phantomjs-2.1.1-linux-x86_64.tar.bz2 /usr/local/share/
+
 RUN ln -sf /usr/local/share/phantomjs-2.1.1-linux-x86_64/bin/phantomjs /usr/local/share/
 RUN ln -sf /usr/local/share/phantomjs-2.1.1-linux-x86_64/bin/phantomjs /usr/local/bin/
 RUN ln -sf /usr/local/share/phantomjs-2.1.1-linux-x86_64/bin/phantomjs /usr/bin/
