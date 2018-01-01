@@ -54,4 +54,4 @@ RUN apt install zip -y
 # RUN cd /root/ && git clone https://gerrit.wikimedia.org/r/pywikibot/core.git && cd core && git submodule update --init && python pwb.py script_name
 
 RUN python --version
-RUN phantomjs --version
+# RUN phantomjs --version
