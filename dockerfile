@@ -25,6 +25,7 @@ RUN pip install scrapy
 RUN pip install ipdb
 RUN pip install celery
 RUN pip install redis
+RUN pip install stem
 
 RUN pip install selenium
 
