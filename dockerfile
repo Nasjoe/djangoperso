@@ -20,7 +20,6 @@ RUN pip install python-Levenshtein
 RUN pip install fuzzywuzzy
 RUN pip install wikipedia
 RUN pip install psycopg2
-RUN apt-get -y install git
 RUN pip install scrapy
 RUN pip install ipdb
 RUN pip install celery
@@ -48,11 +47,6 @@ RUN pip install dicttoxml
 
 RUN apt install poppler-utils -y
 RUN apt install zip -y
-
-
-# RUN pip install django-autocomplete-light
-# RUN pip install requests
-# RUN cd /root/ && git clone https://gerrit.wikimedia.org/r/pywikibot/core.git && cd core && git submodule update --init && python pwb.py script_name
 
 RUN python --version
 # RUN phantomjs --version
